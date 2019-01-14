@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+
+<h1 style="text-align: center">Edit Comment</h1>
+<div class="container">
+    <div class="row">
+        <div style="width: 30%;margin: 0px auto;padding: 10px">
+            <form action="/campground//<%= campground%>/comments/<%= foundcomment._id %>?_method=PUT" method="post" class="form-group">
+                <input type="text" name="comment[text]" value="<%= foundcomment.text %>" class="form-control col-lg-6" style="margin-bottom:5px ">
+                <input type="submit" class="btn btn-lg btn-primary btn-block">
+            </form>
+            <a href="/campground">Show All</a>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,24 @@
+.thumbnail img {
+    width:100%;
+}
+
+.thumbnail{
+    padding: 0px;
+}
+
+.thumbnail .caption-full{
+    padding:9px;
+}
+
+#delete-button{
+    display:inline;
+}
+
+.login{
+    text-align: center;
+    width:30%;
+}
+
+.login input{
+    margin-top: 5px;
+}
