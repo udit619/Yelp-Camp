@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-mongoose.connect("mongodb://localhost/yelpcamp",{useNewUrlParser:true});
+mongoose.connect("mongodb://udit_namdev:laxmi1969@ds257314.mlab.com:57314/yelp-camp",{useNewUrlParser:true});
 //var seedDB = require('../seed');
 var camp = require('../models/camp');
 var Comment  = require('../models/comment');
