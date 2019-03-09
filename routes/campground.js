@@ -1,37 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-mongoose.connect("mongodb://udit_namdev:laxmi1969@ds257314.mlab.com:57314/yelp-camp",{useNewUrlParser:true});
-//var seedDB = require('../seed');
+var id = require('../id');
+mongoose.connect("mongodb://"+username+":"+password+"@ds257314.mlab.com:57314/yelp-camp",{useNewUrlParser:true});
 var camp = require('../models/camp');
 var Comment  = require('../models/comment');
 var middleware = require('../middleware');
 
-
-
-/*var campgrounds=[
-    {name:"First One",image:"https://pixabay.com/get/e834b70c2cf5083ed1584d05fb1d4e97e07ee3d21cac104491f4c37aa7e8b5bb_340.jpg"},
-    {name:"Second One",image:"https://pixabay.com/get/e833b3092cf5033ed1584d05fb1d4e97e07ee3d21cac104491f4c37aa7e8b5bb_340.jpg"},
-    {name:"Third One",image:"https://pixabay.com/get/e83db3062df51c22d2524518b7444795ea76e5d004b0144591f2c279a2edb6_340.jpg"}
-];
-*/
-/*========================
-      Passport Config
-=========================*/
-/*
-router.use(require('express-session')({
-    secret:'Mohit Namdev',
-    saveUninitialized:false,
-    resave:false
-}));
-router.use(passport.initialize());
-router.use(passport.session());
-passport.use(new localstatergy(User.authenticate()));
-passport.serializeUser(User.serializeUser);
-passport.deserializeUser(User.deserializeUser);
-*/
-
-//seedDB();
 
 router.get('/',function (req,res) {
     camp.find({},function (err,DBcampgrounds) {
