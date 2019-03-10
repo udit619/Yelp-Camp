@@ -69,6 +69,4 @@ npm install
 ### Platforms
 
 * [Heroku](https://www.heroku.com/)
-## License
 
-#### [MIT](./LICENSE)
